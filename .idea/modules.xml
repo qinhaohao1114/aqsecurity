@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aq-center/aq-center.iml" filepath="$PROJECT_DIR$/aq-center/aq-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aq-common/aq-common.iml" filepath="$PROJECT_DIR$/aq-common/aq-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aq-school/aq-school.iml" filepath="$PROJECT_DIR$/aq-school/aq-school.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aq-shop/aq-shop.iml" filepath="$PROJECT_DIR$/aq-shop/aq-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aq-zuul/aq-zuul.iml" filepath="$PROJECT_DIR$/aq-zuul/aq-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aqsecurity.iml" filepath="$PROJECT_DIR$/aqsecurity.iml" />
+    </modules>
+  </component>
+</project>
