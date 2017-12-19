@@ -1,10 +1,11 @@
 package com.aq.school.mapper;
 
-import com.aq.school.vo.TeacherVo;
+import com.aq.school.SupperMapper;
+import com.aq.school.model.Teacher;
 import java.util.List;
 
 
-public interface TeacherMapper {
+public interface TeacherMapper extends SupperMapper<Teacher> {
 
-    List<TeacherVo> getTeacherListAll();
+    List<Teacher> getTeacherListAll();
 }

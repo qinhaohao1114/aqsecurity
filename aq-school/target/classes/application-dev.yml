@@ -19,3 +19,68 @@ school:
      maxPoolPreparedStatementPerConnectionSize: 20
      filters: stat,wall,log4j
      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+    timeout: 5000
+    password:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+#      default-binder: defaultRabbit
+#      bindings:
+#        inputOrder:
+#          destination: mqTestOrder
+#          group: addProductHandler
+#        outputOrder:
+#          destination: mqTestOrder
+      default:
+        contentType: application/json
+      rabbit:
+        bindings:
+          teacherInput:
+            consumer:
+              declareExchange: true
+              exchangeType: direct
+              maxPriority: 200
+              concurrency: 1
+              bindingRoutingKey: addProduct.*       # 用来绑定消费者的 routing key
+#          teacherOutput:
+#            producer:
+#              routing-key-expression: '''addProduct.*'''  # 需要用这个来指定 RoutingKey
+
+      bindings:
+        teacherInput:
+          destination: schoolTeacher
+          group: input
+        teacherOutput:
+          destination: schoolTeacher
+        studentInput:
+          destination: schoolStudent
+          group: input
+        studentOutput:
+          destination: schoolStudent
+#  rabbit.bindings:
+#        input.consumer:
+#          declareExchange: true
+#          exchangeType: direct
+#        output.producer:
+#          routingKeyExpression: new String('routing.loan.payment')
+
+loan:
+  check-source-system: false
+  max-wait-millis: 6000
+  max-processing-request: 5000
+  max-batch-size: 500
+  reply-queue-name: school

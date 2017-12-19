@@ -1,0 +1,39 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.aq.school.config.LoanProperties",
+      "name": "loan",
+      "type": "com.aq.school.config.LoanProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.aq.school.config.LoanProperties",
+      "defaultValue": false,
+      "name": "loan.check-source-system",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.aq.school.config.LoanProperties",
+      "defaultValue": 200,
+      "name": "loan.max-batch-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.aq.school.config.LoanProperties",
+      "name": "loan.max-processing-request",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.aq.school.config.LoanProperties",
+      "name": "loan.max-wait-millis",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.aq.school.config.LoanProperties",
+      "name": "loan.reply-queue-name",
+      "type": "java.lang.String"
+    }
+  ]
+}

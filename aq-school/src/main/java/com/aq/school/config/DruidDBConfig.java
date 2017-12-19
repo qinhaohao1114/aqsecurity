@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
@@ -100,5 +102,10 @@ public class DruidDBConfig {
 
         return datasource;
     }
-
+    @Bean
+    @Primary
+    //配置事物管理
+    public DataSourceTransactionManager masterTransactionManager() throws SQLException {
+        return new DataSourceTransactionManager(dataSource());
+    }
 }

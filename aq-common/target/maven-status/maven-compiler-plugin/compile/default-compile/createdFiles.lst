@@ -1,0 +1,4 @@
+com\aq\common\a.class
+com\aq\common\aop\ControllerAOP.class
+com\aq\common\beans\ResultBean.class
+com\aq\common\exception\CheckException.class

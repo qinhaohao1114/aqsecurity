@@ -30,3 +30,14 @@ eureka:
     lease-renewal-interval-in-seconds: 5
 logging:
   file: aq.log
+  level: debug
+  #mappers 多个接口时逗号隔开
+mapper:
+  mappers: com.aq.school.SupperMapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
