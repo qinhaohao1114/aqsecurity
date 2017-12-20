@@ -1,0 +1,43 @@
+server:
+  port: 11139
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+dev: dev
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  application:
+    name: aq-shop
+  profiles:
+    active: dev
+mybatis:
+  mapperLocations: classpath*:com/aq/school/mapper/xml/*.xml,classpath:mapper/*.xml
+  typeAliasesPackage: com.aq.shop.vo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://aq-security:aq-security@10.138.20.90:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      zone: ABC      # eureka可以理解的元数据
+      lilizhou: BBC  # 不会影响客户端行为
+    lease-renewal-interval-in-seconds: 5
+logging:
+  file: aq.log
+  level: debug
+  #mappers 多个接口时逗号隔开
+mapper:
+  mappers: com.aq.school.SupperMapper
+  not-empty: false
+  identity: MYSQL
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql

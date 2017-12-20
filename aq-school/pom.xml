@@ -136,6 +136,5 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>VCS-WEB</finalName>
     </build>
 </project>

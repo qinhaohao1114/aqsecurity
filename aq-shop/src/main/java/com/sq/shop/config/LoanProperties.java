@@ -1,9 +1,11 @@
-package com.aq.school.config;
+package com.sq.shop.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 
+/**
+ */
 @Configuration
 @ConfigurationProperties("loan")
 public class LoanProperties {
